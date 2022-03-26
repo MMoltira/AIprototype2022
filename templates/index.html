@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFIRM BY</title>
+  </head>
+  <body>
+    <head>
+      <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #ee0d0d;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+  }
+  </style>
+  </head>
+
+  <table>
+    <tr>
+      <th style="font-size:18px" style="color:red">ชื่อ</th>
+      <th style="font-size:18px" style="color:red">สกุล</th>
+      <th style="font-size:18px" style="color:red">เกรด</th>
+    </tr>
+    <tr>
+      <td>{{request.cookies.get('fname')}}</td>
+      <td>{{request.cookies.get('lname')}}</td>
+      <td> {{request.cookies.get('fav_language')}}</td>
+    </tr>
+  </table>
+
+    <h1> Confirm :</h1>
+    <p> Flask is Fun </p>
+    <h2 style="color: red;"> Hollo, {{name}} </h2>
+    <h1 style="color: rgb(240, 22, 211);"> Cookies = {{request.cookies.get('fname')}}</h1>
+    <h1 style="color: rgb(240, 22, 211);"> Cookies = {{request.cookies.get('lname')}}</h1>
+    <h1 style="color: rgb(29, 240, 22);"> Cookies = {{request.cookies.get('fav_language')}}</h1>
+    <h3> {{2**5}}</h3>
+    <h2 style="color: rgb(37, 164, 202);">{{fav}}</h2>
+
+    <form action="{{ url_for('home')}}" method="post">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="fname" placeholder="firstname">
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lname" placeholder="lastname">
+      <button type="submit">Login</button>
+    </form>
+
+    <p> เทอมนี้จะได้เกรดอะไร </p>
+    <form action="{{ url_for('home1')}}" method="post">
+<input type="radio" id="html" name="fav_language" value="A">
+<label for="html">A</label><br>
+<input type="radio" id="css" name="fav_language" value="A+">
+<label for="css">A+</label><br>
+<input type="radio" id="javascript" name="fav_language" value="A++">
+<label for="javascript">A++</label><br>
+<button type="submit">submit</button>
+</form>
+    </body>
+</html>
