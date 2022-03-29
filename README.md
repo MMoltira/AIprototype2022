@@ -67,6 +67,7 @@
 * ## ติดตั้ง miniconda จาก  [link](https://docs.conda.io/en/latest/miniconda.html)
    * ติดตั้งแพ็คเกจต่าง ๆ ผ่าน conda install
    * การสร้าง virtual environment เพื่อไม่ให้รบกวนคนอื่น ป้องกันงานหาย
+         
          * สามารถพิมพ์ python เพื่อดูเวอร์ชันที่ใช้ได้ และพิมพ์ exit() เพื่อออกมายังหน้าเดิม
          * พิมพ์ conda create -n testpy3.7(ตั้งชื่อ) python=3.7(เวอร์ชั่นที่ต้องการ)  เป็นคำสั่งในการเริ่มสร้าง environment โดยต้องการใช้ python เวอร์ชัน 3.7
          * พิมพ์ conda activate testpy3.7(ชื่อที่ตั้งไว้) ถ้าสร้าสำเร็จมันจะขึ้นชื่อ testpy3.7 ข้างหน้า ดังรูป
