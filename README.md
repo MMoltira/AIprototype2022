@@ -59,6 +59,56 @@
 * ## SCP ตามด้วยที่อยู่ต้นทาง ตามด้วยที่อยู่ปลายทาง คือวิธีส่งไฟล์จากเครื่องตัวเองไปยังเครื่องอื่น
    * ส่งไฟล์จากเครื่องเรา เช่น SCP .xxx.jpg(ที่อยู่ของเครื่อง)---> user@ip(ที่อยู่Address) :/xxx/xxx/ (ที่อยู่ในเครื่องปลายทาง)
    * ดึงไฟล์จาก VM เช่น SCP user@ip(ที่อยู่Address) :/xxx/xxx/ (ที่อยู่ในเครื่องปลายทาง) ---> โฟลเดอร์ที่เราต้องการ
+* ## screen คือการสร้างหน้าบางอย่างขึ้นมาลอย ๆ ไม่ต้องไป connect กับใคร
+   * พิมพ์คำสั่ง screen -S tscreen(ตั้งชื่ออะไรก็ได้) เพื่อสร้าง session ในหน้า screen
+   * พิมพ์คำสั่ง screen -R คือ ย้อนกลับไปในหน้า screen นั้น ๆ
+   * กดแปป้นพิมพ์ ctrl+A ยกนิ้วขึ้นแล้ว กด D เพื่อออกจากหน้า screen
+   * พิมพ์คำสั่ง screen -R tscreen(ชื่อที่ตั้งไว้) คือกลับเข้าไปใน screen ที่สร้างไว้
+* ## ติดตั้ง miniconda จาก  [link](https://docs.conda.io/en/latest/miniconda.html)
+   * ติดตั้งแพ็คเกจต่าง ๆ ผ่าน conda install
+   * การสร้าง virtual environment เพื่อไม่ให้รบกวนคนอื่น ป้องกันงานหาย
+         * สามารถพิมพ์ python เพื่อดูเวอร์ชันที่ใช้ได้ และพิมพ์ exit() เพื่อออกมายังหน้าเดิม
+         * พิมพ์ conda create -n testpy3.7(ตั้งชื่อ) python=3.7(เวอร์ชั่นที่ต้องการ)  เป็นคำสั่งในการเริ่มสร้าง environment โดยต้องการใช้ python เวอร์ชัน 3.7
+         * พิมพ์ conda activate testpy3.7(ชื่อที่ตั้งไว้) ถ้าสร้าสำเร็จมันจะขึ้นชื่อ testpy3.7 ข้างหน้า ดังรูป
+        
+        ![image](https://user-images.githubusercontent.com/68935366/160260909-c00e9c93-f9b3-4d3c-8ac8-bfe5fca716f6.png)
+         
+         * พิมพ์ pip install pandas เพื่อติดตั้งแพ็ตเกจต่าง ๆ ของ pandas
+         * พิมพ์ conda install jupyter เพื่อดาวน์โหลดโค้ดที่ถูกคอมไพล์ไว้แล้ว รวมถึงแพ็คเกจอื่น ๆ ที่จำเป็นในการใช้ jupyter
+         * พิพม์ conda deactivate เมื่อใช้งานแล้วเราอยากไปที่อื่นก็สามารถพิมพ์คำสั่งดังกล่าวได้
+         * พิมพ์ conda info --envs เพื่อดูว่ามี virtual environment อะไรบ้าง
+
+# ➡️หัวข้อที่ 3 Custom vision AI ML
+
+# ➡️หัวข้อที่ 4  Python (Subprocess, OS, python.py)
+  ## ใช้ Visual Studio Code ในการสร้างโค้ด 
+  * python script จะคล้าย ๆ กับการเขียนสคริปท์ในภาษาอื่น เช่น ภาษาซี
+  * จะมี main function ที่จะถูกรันก่อนใน python
+  * argparse คือ ตัวที่กำหนดว่าตัวโปรแกรมเราสามารถรับ input ตอนสั่ง command line ภายนอกได้ [code](https://github.com/MMoltira/AIprototype2022/blob/main/python2.py)
+  * subprocess คือ สำหรับรัน terminal command [code](https://github.com/MMoltira/AIprototype2022/blob/main/testsub.py)
+
+
+# ➡️หัวข้อที่ 5 Git
+  * ## การ setup git ครั้งแรก สำหรับคนที่ไม่เคยset git บน command line
+       * พิมพ์คำสั่ง $ git config --global user.name "Moltira" คือการตั้งชื่อบน command line เพื่อให้ใช้งานบนกิตฮับได้สะดวก
+       * พิมพ์คำสั่ง $ git config --global user.email Moltira@example.com คือการตั้งชื่ออีเมล์บน command line
+  * ## คำสั่ง git ที่ต้องรู้
+       * git clone (ตามด้วยที่อยู่ URL ของ git นั้น) คือการ clone กิตฮับของคนอื่นมาหรืองานที่เราต้องการแก้ไขต่อ เรียกอีกอย่างว่า การfork
+       * git status คือ ดูว่าไฟล์ไหนที่ถูกแก้ไขไปจากต้นทางที่ clone มา
+       * git add คือ การเพิ่มไฟล์ที่เราแก้ไปแล้ว หรือไฟล์ที่ต้องการอัพขึ้นไปบนกิตฮับ
+       * git commit -m "(ใส่คอมเม้น)" คือ การใส่คอมเม้นหรือรายละเอียดที่เราแก้ไขไป
+       * git push คือ การอัพโหลดไฟล์ที่เราแก้ไปบนกิต
+       * git pull คือ เกิดขึ้นเมื่อทำงานร่วมกับคนอื่น มันจะดึงเวอร์ชันล่าสุดที่อีกคนแก้แล้วให้เห็นแล้วเราสามารถแก้ไขต่อได้โดยไม่ชนกัน
+
+
+# ➡️หัวข้อที่ 6 Google colab
+
+# ➡️หัวข้อที่ 7 API --> Flask
+flask สำหรับทำเว็บแอปและเว็บเซอวิส API
+
+# ➡️หัวข้อที่ 8 Tensorflow -Pytorch
+
+# ➡️หัวข้อที่ 9 Latex Overleaf
 
 
 
