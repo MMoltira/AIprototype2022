@@ -79,7 +79,8 @@
          * พิพม์ conda deactivate เมื่อใช้งานแล้วเราอยากไปที่อื่นก็สามารถพิมพ์คำสั่งดังกล่าวได้
          * พิมพ์ conda info --envs เพื่อดูว่ามี virtual environment อะไรบ้าง
 
-# ➡️หัวข้อที่ 3 Custom vision AI ML
+# ➡️หัวข้อที่ 3 Custom vision AI ML 
+ ## Cloud DB & Cloud AI [Code](https://github.com/MMoltira/AIprototype2022/blob/main/Cloud_DB_and_AI.ipynb)
 
 # ➡️หัวข้อที่ 4  Python (Subprocess, OS, python.py)
   ## ใช้ Visual Studio Code ในการสร้างโค้ด 
@@ -103,13 +104,23 @@
 
 
 # ➡️หัวข้อที่ 6 Google colab
+  * ## Tensorflow -Pytorch : [code](https://github.com/MMoltira/AIprototype2022/blob/main/Tensorflow(network).ipynb)
+  * ## Cloud DB & Cloud AI : [Code](https://github.com/MMoltira/AIprototype2022/blob/main/Cloud_DB_and_AI.ipynb)
 
 # ➡️หัวข้อที่ 7 API --> Flask
-flask สำหรับทำเว็บแอปและเว็บเซอวิส API
+## flask สำหรับทำเว็บแอปและเว็บเซอวิส API
+  * ## Test flask file : [code](https://github.com/MMoltira/AIprototype2022/blob/main/testflask.py)
+  * ## Home .html file : [code](https://github.com/MMoltira/AIprototype2022/blob/main/templates/index.html)
+  * ## Database scv file : [code](https://github.com/MMoltira/AIprototype2022/blob/main/dtb.csv)
+  * ## Requests : [code](https://github.com/MMoltira/AIprototype2022/blob/main/postrequests.py)
 
 # ➡️หัวข้อที่ 8 Tensorflow -Pytorch
+ ## การสร้าง Neural Network ด้วย Tensorflow Sequential API: [code](https://github.com/MMoltira/AIprototype2022/blob/main/Tensorflow(network).ipynb)
+   * ### Sequentail - สร้างง่าย แต่ได้ network ธรรมดา (ไม่ซับซ้อน) วิ่งเป็นเส้นตรง
+   * ### Functional - สร้างยากกว่า Sequentail (ซับซ้อนกว่า) ได้ network ที่แปลกกว่า / ปรับเส้นทางให้มีความซับซ้อนได้
+   * ### Subclassing - ยากสุด แต่สามารถแก้ไขได้ตามที่ต้องการ #ไม่ได้เรียน
 
-# ➡️หัวข้อที่ 9 Latex Overleaf
+# ➡️หัวข้อที่ 9 Latex Overleaf (ไม่ได้เรียน)
 
 
 
